@@ -1,8 +1,3 @@
-
-AKASHINE Y 22CSR012 <akashiney.22cse@kongu.edu>
-2:15 PM (0 minutes ago)
-to ARUNESH
-
 Git installation:
 
 1. sudo apt update
@@ -98,4 +93,3 @@ services:
 5. docker-compose ps
 6. sudo docker exec -it bavya_db_1 bash
 7. mysql -u root -p
-
