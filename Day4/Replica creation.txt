@@ -27,3 +27,28 @@ $ kubectl scale replicaset <replicaset-name> --replicas=<desired-replica-count>
 6. Delete ReplicaSet
 $ kubectl delete rs <replica-set-name>
 $ kubectl delete -f rs-test.yml
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy
+  labels:
+    name: my-deploy
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      apptype: web-backend
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        apptype: web-backend
+    spec:
+      containers:
+      - name: my-app
+        image:         
+        ports:
+              - containerPort: 7070
